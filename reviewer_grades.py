@@ -1,6 +1,6 @@
 
 
-def two_grades(teamName, teamID, deliverable):
+def two_grades(teamID, deliverable):
     '''
     This function reads in the text file, "<team_id>_<deliverable>_grades.txt", and places the lines 
     into a manageable list.
@@ -55,7 +55,7 @@ def two_grades(teamName, teamID, deliverable):
 
 
 
-def three_grades(teamName, teamID, deliverable):
+def three_grades(teamID, deliverable):
     '''
     This function reads in the text file, "<team_id>_<deliverable>_grades.txt", and places the lines 
     into a manageable list.
@@ -121,7 +121,7 @@ def three_grades(teamName, teamID, deliverable):
 
 
 
-def four_grades(teamName, teamID, deliverable):
+def four_grades(teamID, deliverable):
     '''
     This function reads in the text file, "<team_id>_<deliverable>_grades.txt", and places the lines 
     into a manageable list.
@@ -198,7 +198,7 @@ def four_grades(teamName, teamID, deliverable):
 
 
 
-def five_grades(teamName, teamID, deliverable):
+def five_grades(teamID, deliverable):
     '''
     This function reads in the text file, "<team_id>_<deliverable>_grades.txt", and places the lines 
     into a manageable list.
@@ -286,7 +286,7 @@ def five_grades(teamName, teamID, deliverable):
 
 
 
-def six_grades(teamName, teamID, deliverable):
+def six_grades(teamID, deliverable):
     '''
     This function reads in the text file, "<team_id>_<deliverable>_grades.txt", and places the lines 
     into a manageable list.

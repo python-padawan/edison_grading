@@ -5,12 +5,14 @@
 def parse_student_file(file_input):
     '''
     This function reads in the text file "student_names.txt" and places the lines
-    into a list.
-    The list generated is returned by the function.
+    into a list.  The list is made into a dictionary.
+    The dictionary generated is returned by the function.
+    TO-DO: Define simplier way to do this!!!
     '''
     
     working_student_list = []
     student_list = []
+    student_dictionary = {}
     
     input_file = open(file_input, 'r')
     
@@ -36,14 +38,8 @@ def parse_student_file(file_input):
         # team_name_index = working_student_list[i].find(',', team_id_index + 2)
         team_name = working_student_list[i][team_id_index + 2:]
         student_list.append(team_name)
-    return student_list
-   
-def create_grade_files(student_list):
-    '''
-    This function reads in a list and creates text files for each student
-    '''
-    
-    student_dictionary = {}
+
+
     i = 0
     n = 4 # Number of columns in the student list
     for i in range(len(student_list)):
@@ -52,13 +48,18 @@ def create_grade_files(student_list):
                                                    student_list[i + 1], 
                                                    student_list[i + 2], 
                                                    student_list[i + 3]]
+    return student_dictionary
+   
     
-    for keys in student_dictionary.keys():
-        file_name = str(student_dictionary[keys][1]) + "_" + str(student_dictionary[keys][0]) + "_grades.txt"
+def create_grade_files(a_dictionary):
+    for keys in a_dictionary.keys():
+        file_name = str(a_dictionary[keys][1]) + "_" + str(a_dictionary[keys][0]) + "_grades.txt"
         output_file = open(file_name, 'w')
-        output_file.write(str(student_dictionary[keys][1]) + " " + str(student_dictionary[keys][0]) + " Edison B-Course Grades\n")
+        output_file.write(str(a_dictionary[keys][1]) + " " + str(a_dictionary[keys][0]) + " Edison B-Course Grades\n")
         output_file.close()
-    
-    
+        
+        
 # Test the file creation
 # create_grade_files(parse_student_file("student_names.txt"))
+    
+    
